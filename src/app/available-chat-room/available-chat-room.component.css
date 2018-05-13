@@ -1,0 +1,125 @@
+:root{
+    font-size: 16px;
+    width: 10vw;
+    height:20px;
+}
+
+.home-body{
+    background: url("https://i.imgur.com/vV4ydZp.png") no-repeat center fixed; 
+    padding:2%;
+    background-size: cover;
+    height : 100%;
+   
+}
+
+.heading-text{
+    font-family: 'Arvo', serif;
+    font-size: 2rem;
+    text-decoration: underline;
+    background:rgba(87, 86, 84, 0.509);
+    font-weight:bold;
+    color: black;
+    padding: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space:normal;
+}
+
+.content-text{
+    font-family: 'Lato', sans-serif;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space:normal;
+}
+
+.card-heading-text{
+    font-family: 'Arvo', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: underline;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space:normal;
+    letter-spacing: 3px;
+    
+}
+
+
+.booksContainer{
+    padding:2%;
+    /* background:greenyellow; */
+}
+
+.bookCard{
+    display:flex;
+    flex-direction: column;
+    background:rgb(214, 208, 208);
+    border-style: solid;
+    margin : 2px;
+    border-width: 1px;
+    align-content: space-between;
+}
+
+.characterContainer{
+    padding:2%;
+    /* background:rgb(47, 155, 197); */
+}
+
+.characterCard{
+    display:flex;
+    flex-direction: column;
+    background:rgb(235, 207, 49);
+    border-style: solid;
+    margin : 2px;
+    border-width: 1px;
+    align-content: space-between;
+}
+
+.houseContainer{
+    padding:2%;
+    
+}
+
+.houseCard{
+    display:flex;
+    flex-direction: column;
+    background:rgb(77, 235, 49);
+    border-style: solid;
+    margin : 2px;
+    border-width: 1px;
+    align-content: space-between;
+}
+
+.scrollGroup {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.scrollCol {
+    display: inline-block;
+    float: none;
+}
+
+
+
+.buttonRow{
+    display:flex;
+    flex-direction: horizontal;
+    justify-content: center;
+}
+
+
+
+.content-text{
+    font-family: 'Lato', sans-serif;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space:normal;
+    background:rgba(87, 86, 84, 0.509);
+    color: black;
+    padding: 2%;
+    font-size: 1.5rem;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

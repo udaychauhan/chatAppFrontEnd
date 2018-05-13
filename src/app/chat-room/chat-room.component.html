@@ -1,0 +1,46 @@
+<!-- chat room info div -->
+<div class="container " >
+  <div class="row">
+    <div class="col-12">
+      <h5 class="content-text">Heading : {{isTyping}}</h5>
+    </div>
+  </div>
+</div>
+<!-- chat room info div end -->
+<!-- chat view div -->
+<div class="container message-container" style="text-align: center" >
+  <div class="row minor-chat-container" *ngIf="chatRoomMessages.length > 0 && chatRoomMessages != undefined">
+    <div *ngFor="let message of chatRoomMessages">
+
+      <div class="card">
+        <div class="card-body" style="height:100%;width: 100%">
+          <h5 class="card-title heading-text">{{message.senderName | uppercase}}</h5>
+          <p class="content-text"> {{message.message | uppercase}}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- chat view div end -->
+<!-- send message div -->
+<br>
+<div class="container " style="text-align:center;  height:60%;">
+
+  <form #createBlogForm="ngForm" (ngSubmit)="sendMessage()">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="form-group">
+          <input type="text" name="messageText" [(ngModel)]="messageText" (keydown)="sendMessageUsingKeypress($event)" (keypress)="sendTypingEventToOtherUsers($event)"
+            #pass="ngModel" class="form-control" placeholder="Type your message" required>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <button type="submit" class="btn btn-primary" [disabled]="!createBlogForm.form.valid">Send!</button>
+      </div>
+    </div>
+  </form>
+
+</div>
+<!-- send message div end -->

@@ -1,0 +1,50 @@
+<div class="container">
+
+  <div class="row" style="text-align:left">
+    <div class="col-md-12">
+      <form #createBlogForm="ngForm" (ngSubmit)="onChatRoomCreateButtonClick()">
+
+        <div class="form-group">
+          <label>Chat Room Name</label>
+          <input type="text" name="chatRoomName" [(ngModel)]="chatRoomName" #pass="ngModel" class="form-control" placeholder="Chat Room Name"
+            required>
+        </div>
+       
+        <button type="submit" class="btn btn-primary" [disabled]="!createBlogForm.form.valid" >Create New Chat Room!</button>
+      </form>
+    </div>
+
+  </div>
+
+  </div>
+  <br>
+<!-- info display -->
+  <div class="card-body" style="height:100%;width: 100%">
+    <h5 class="card-title heading-text" style="text-align:center">INFO : FullName == {{userName | uppercase}} UserId == {{userId | uppercase}}</h5>
+  </div>
+
+  <!-- chat room array -->
+  <div class="container">
+    <div class="row" style="text-align:center" *ngIf="chatRoomArray.length > 0 && chatRoomArray != undefined">
+
+      <div *ngFor="let chatRoom of chatRoomArray">
+
+        <div class="card">
+          <!--style="width:20rem; height:20rem;"-->
+          <div class="card-body" style="height:100%;width: 100%">
+            <h5 class="card-title heading-text">{{chatRoom.chatRoomName | uppercase}}</h5>
+            <p class="content-text">By : {{chatRoom.creatorName | uppercase}}</p>
+            <!-- <p class="content-text">By : {{chatRoom.creatorId | uppercase}}</p> -->
+            <button (click)="redirectToChatRoom(chatRoom.chatRoomId)" class="cardButton btn btn-primary"> Enter the ROOM!!</button>   
+            <button (click)="deleteChatRoom(chatRoom.chatRoomId)" *ngIf = "chatRoom.creatorId == userId"class="cardButton btn btn-primary"> Delete This Group</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  
+
+
+
+  </div>
